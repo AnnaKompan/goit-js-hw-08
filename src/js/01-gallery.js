@@ -1,29 +1,30 @@
 // Add imports above this line
-import { galleryItems } from "./gallery-items";
+import { galleryItems } from './gallery-items';
 // Change code below this line
 
 console.log(galleryItems);
 
-const gallery = document.querySelector(".gallery");
+const gallery = document.querySelector('.gallery');
 const galleryItem = createGalleryItems(galleryItems);
 
 function createGalleryItems(items) {
   return items
     .map(
-      (item) => `<a class="gallery__item" href=${item.original}>
+      item => `<a class="gallery__item" href=${item.original}>
       <img class="gallery__image" src=${item.preview} alt=${item.description} />
       </a>`
     )
-    .join("");
+    .join('');
 }
 
 gallery.innerHTML = galleryItem;
 
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
-new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
-  captionPosition: "bottom",
+new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionPosition: 'bottom',
   captionsDelay: 250,
 });
+//
