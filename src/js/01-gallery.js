@@ -27,4 +27,3 @@ new SimpleLightbox('.gallery a', {
   captionPosition: 'bottom',
   captionsDelay: 250,
 });
-//
